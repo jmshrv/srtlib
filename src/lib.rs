@@ -299,7 +299,7 @@ impl fmt::Display for Timestamp {
 /// let sub = Subtitle::parse("2\n00:00:01,500 --> 00:00:02,500\nFooBar".to_string()).unwrap();
 /// assert_eq!(sub.text, "FooBar");
 /// ```
-#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Clone, Copy)]
 pub struct Subtitle {
     pub num: usize,
     pub start_time: Timestamp,
